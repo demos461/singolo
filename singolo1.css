@@ -87,6 +87,7 @@ h1,h2,h3,h4,h5,h6 {
 
 }
 
+
 /* Slider */
 
 .slider {
@@ -166,3 +167,61 @@ a.arrow_right {
 a.arrow_right:hover {
     background: url('assets/img/rigthArrow-white.png');
 }
+
+/* Services */
+
+.services {
+    background-color: #f2f2f2;
+    height: 500px;
+    border-bottom: 6px solid #fff;
+}
+
+
+.services__title {
+    font-size: 30px;
+    font-weight: 900;
+    padding-top: 60px;
+    padding-bottom: 18px;
+}
+
+.services__desc
+{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.services_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 47px;
+}
+
+.service_item {
+    flex-basis: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 33px;
+    height: 90px;
+}
+
+.service__text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.8;
+    text-align: justify;
+    width: 220px;
+    overflow: hidden;
+}
+
+.item_title {
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+
+
