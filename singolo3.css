@@ -159,6 +159,7 @@ input[type=text], input[type=email] {
     font-size: 12px;
     font-weight: 400;
     margin-top: 30px;
+    margin-left: 2px;
 }
 
 .footer__inner {
@@ -169,7 +170,6 @@ input[type=text], input[type=email] {
 .social {
     display: flex;
     margin-top: 22px;
-    margin-left: ;
 }
 
 .social__item {
@@ -199,4 +199,22 @@ input[type=text], input[type=email] {
 
 .social__item:hover .social__icon {
     fill: #f2f2f2;
+}
+
+#submit {
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #f2f2f2;
+    border-radius: 5px;
+    background-color: #f06c64;
+    font-size: 12px;
+    font-weight: 400;
+    color: #f2f2f2
+}
+
+#submit:hover {
+    cursor: pointer;
+    color: #f06c64;
+    background-color: #f2f2f2;
 }
