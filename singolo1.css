@@ -122,7 +122,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .horphone {
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     margin-right: 1px;
 
 }
@@ -131,8 +131,8 @@ h1,h2,h3,h4,h5,h6 {
     left: 15px;
     top: 61px;
     position: absolute;
-    background: url(/assets/img/screen1.png);
-    background-position: -13px -134px;
+    background: url(./assets/img/screen1.png);
+    background-position: -13px -136px;
     height: 334px;
     width: 189px;
 }
@@ -141,31 +141,31 @@ h1,h2,h3,h4,h5,h6 {
     right: 91px;
     top: 131px;
     position: absolute;
-    background: url(/assets/img/screen2.png);
-    background-position: -125px -118px;
+    background: url(./assets/img/screen2.png);
+    background-position: -125px -119px;
     height: 189px;
     width: 334px;
 }
 a.arrow_left {
-    background: url('assets/img/leftArrow.png');
+    background: url('./assets/img/leftArrow.png');
     display: block;
     height: 27px;
     width: 16px;
 }
 
 a.arrow_left:hover{
-    background: url('assets/img/leftArrow-white.png');
+    background: url('./assets/img/leftArrow-white.png');
 }
 
 a.arrow_right {
-    background: url('assets/img/rightArrow.png');
+    background: url('./assets/img/rightArrow.png');
     display: block;
     height: 27px;
     width: 16px;
 }
 
 a.arrow_right:hover {
-    background: url('assets/img/rigthArrow-white.png');
+    background: url('./assets/img/rigthArrow-white.png');
 }
 
 /* Services */
@@ -196,8 +196,9 @@ a.arrow_right:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 47px;
+    margin-top: 46px;
 }
+
 
 .service_item {
     flex-basis: 300px;
@@ -207,7 +208,12 @@ a.arrow_right:hover {
     height: 90px;
 }
 
-.service__text {
+.item__logo {
+    margin-top: 1px;
+    margin-left: 1px;
+}
+
+.item__text {
     font-size: 12px;
     font-weight: 400;
     line-height: 1.8;
@@ -216,11 +222,11 @@ a.arrow_right:hover {
     overflow: hidden;
 }
 
-.item_title {
+.item__title {
     font-size: 18px;
     font-weight: 900;
     line-height: 1;
-    margin-bottom: 8px;
+    margin-bottom: 9px;
 }
 
 
