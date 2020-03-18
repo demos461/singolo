@@ -5,51 +5,14 @@ var phone1 = document.querySelector('.verphone');
 var phone2 = document.querySelector('.horphone');
 var portfolioButtons = document.querySelectorAll('.portfolio_btn');
 
+// HEADER
+
 menu.addEventListener('click', (event) => {
     menu.querySelectorAll('a').forEach(el => el.classList.remove('nav_active'));
     event.target.classList.add('nav_active');
 });
 
-tab.addEventListener('click', (event) => {
-    if (event.target != tab)
-    {
-        tab.querySelectorAll('.portfolio_btn').forEach(el => el.classList.remove('portfolio_btn_active'));
-        event.target.classList.add('portfolio_btn_active');
-    }
-   
-});
-
-works.addEventListener('click', (event) => {
-    if (event.target != works)
-    {
-        works.querySelectorAll('img').forEach(el => el.classList.remove('works__item_active'));
-        event.target.classList.add('works__item_active');
-    }
-   
-});
-
-
-
-function switchImg(){
-    var imgs = document.querySelectorAll(".works__item img");
-	var rand, temp;
-	for(var i = imgs.length - 1; i > 0; i--){
-		rand = Math.floor(Math.random()*(i + 1));
-		temp = imgs[rand].src;
-		imgs[rand].src = imgs[i].src;
-		imgs[i].src = temp;
-	}
-}
-
-for (var i = 0; i < portfolioButtons.length; i++) {
-    portfolioButtons[i].onclick = function(){
-    switchImg()
-    };
-  }
-
-
-
-
+//SLIDER 
 
 phone1.addEventListener('click', () => {
     if(document.querySelector('.screen1').classList.contains('screen_off'))
@@ -71,37 +34,93 @@ phone2.addEventListener('click', () => {
     }
 });
 
+let items = document.querySelectorAll('.carousel_item');
+let currentItem = 0;
+let isEnabled = true;
 
-var slideIndex = 1;
-showSlides(slideIndex);
-
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function changeCurrentItem(n) {
+	currentItem = (n + items.length) % items.length;
 }
 
-function showSlides(n) {
-  var slides = document.getElementsByClassName('slides')
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (var i = 0; i < slides.length; i++) {
-      slides[i].style.visibility = "hidden";
-  }
-  slides[slideIndex-1].style.visibility = "visible";
-  if (document.querySelector('.phones2').style.visibility == "visible") 
-  { 
-      document.querySelector('.slider').style.backgroundColor = "#648BF0"
-      document.querySelector('.slider').style.borderBottomColor = "#648BF0"
-  }
-  else 
-  {
-    document.querySelector('.slider').style.backgroundColor = "#f06c64"
-    document.querySelector('.slider').style.borderBottomColor = "#ea676b"
-  }
+function hideItem(direction) {
+	isEnabled = false;
+	items[currentItem].classList.add(direction);
+	items[currentItem].addEventListener('animationend', function() {
+		this.classList.remove('active', direction);
+	});
 }
 
-var nextBtn = document.getElementById('next').onclick = function() { plusSlides(1) };
-var prevBtn = document.getElementById('prev').onclick = function() { plusSlides(1) };
+function showItem(direction) {
+	items[currentItem].classList.add('next', direction);
+	items[currentItem].addEventListener('animationend', function() {
+		this.classList.remove('next', direction);
+		this.classList.add('active');
+		isEnabled = true;
+	});
+}
+
+function nextItem(n) {
+	hideItem('to-left');
+	changeCurrentItem(n + 1);
+    showItem('from-right');
+}
+
+function previousItem(n) {
+	hideItem('to-right');
+	changeCurrentItem(n - 1);
+	showItem('from-left');
+}
+
+document.querySelector('.arrow_left').addEventListener('click', function() {
+	if (isEnabled) {
+		previousItem(currentItem);
+	}
+});
+
+document.querySelector('.arrow_right').addEventListener('click', function() {
+	if (isEnabled) {
+		nextItem(currentItem);
+	}
+});
+
+//PORTFOLIO
+
+tab.addEventListener('click', (event) => {
+    if (event.target != tab)
+    {
+        tab.querySelectorAll('.portfolio_btn').forEach(el => el.classList.remove('portfolio_btn_active'));
+        event.target.classList.add('portfolio_btn_active');
+    }
+   
+});
+
+works.addEventListener('click', (event) => {
+    if (event.target != works)
+    {
+        works.querySelectorAll('img').forEach(el => el.classList.remove('works__item_active'));
+        event.target.classList.add('works__item_active');
+    }
+   
+});
+
+function switchImg(){
+    var imgs = document.querySelectorAll(".works__item img");
+	var rand, temp;
+	for(var i = imgs.length - 1; i > 0; i--){
+		rand = Math.floor(Math.random()*(i + 1));
+		temp = imgs[rand].src;
+		imgs[rand].src = imgs[i].src;
+		imgs[i].src = temp;
+	}
+}
+
+for (var i = 0; i < portfolioButtons.length; i++) {
+    portfolioButtons[i].onclick = function(){
+    switchImg()
+    };
+}
+
+//GET A QUOTE
 
 var submitBtn = document.getElementById('submit_btn');
 var closeBtn = document.getElementById('close_btn');
@@ -137,4 +156,37 @@ form.addEventListener('submit', (e) => {
 closeBtn.addEventListener('click', () => { 
     document.querySelector('.message_block').classList.add('message_hidden');
     form.reset(); 
+});
+
+//SCROLL 
+
+var services = document.getElementById('services').offsetTop-100;
+var portfolio = document.getElementById('portfolio').offsetTop-100;
+var about = document.getElementById('about').offsetTop-100;
+var navLink = document.querySelectorAll('.nav_link');
+
+window.addEventListener('scroll', function() {
+    var page_offset=window.pageYOffset;
+
+    if(page_offset>=0) {
+        menu.querySelectorAll('a').forEach(el => el.classList.remove('nav_active'));
+        navLink[0].classList.add('nav_active');
+    }
+    if(page_offset>100 && page_offset<services) {
+        menu.querySelectorAll('a').forEach(el => el.classList.remove('nav_active'));
+        navLink[1].classList.add('nav_active');
+    }
+    if(page_offset>=services && page_offset<portfolio) {
+        menu.querySelectorAll('a').forEach(el => el.classList.remove('nav_active'));
+        navLink[2].classList.add('nav_active');
+    }
+    if(page_offset>=portfolio && page_offset<about) {
+        menu.querySelectorAll('a').forEach(el => el.classList.remove('nav_active'));
+        navLink[3].classList.add('nav_active');
+    }
+    if(page_offset>=about) {
+        menu.querySelectorAll('a').forEach(el => el.classList.remove('nav_active'));
+        navLink[4].classList.add('nav_active');
+    }
+
 });

@@ -42,28 +42,23 @@
     <div class="wrapper">
       <div class="slider__inner">
 
-        <a href="#" class="arrow_left" id="prev"></a>
+        <a href="#" class="arrow_left" id></a>
 
-        <div class="infinity-slider">
-            <div class="phones1 slides" id="slider_item">
-            <img
-                src="./assets/img/verphone.png"
-                alt="phone"
-                class="verphone"
-            />
-            <div class="screen1"></div>
-            <img
-                src="./assets/img/horphone.png"
-                alt="phone"
-                class="horphone"
-            />
-            <div class="screen2"></div>
+        <div class="carousel">
+            <div class="carousel_item active">
+                <div class="phones1">
+                    <img src="./assets/img/verphone.png" alt="phone" class="verphone"/>
+                    <img src="./assets/img/horphone.png" alt="phone" class="horphone"/>
+                    <div class="screen1"></div>
+                    <div class="screen2"></div>
+                </div>
             </div>
-
-            <div class="phones2 slides" id="slider_item">
-            </div> 
+            <div class="carousel_item">
+                <div class="phones2"></div> 
+            </div>
         </div>
-        <a href="#" class="arrow_right" id="next"></a>
+
+        <a href="#" class="arrow_right"></a>
 
       </div>
     </div>
@@ -348,7 +343,7 @@
 </div>  <!-- /.aboutus -->
 
 <!-- Get a Quote -->
-<div class="quote">
+<div class="quote" id="contact">
     <div class="wrapper">
         <div class="quote__title">Get a Quote</div>
         <div class="quote__description">
@@ -366,7 +361,7 @@
                     <input type="submit" value="Submit" id="submit_btn">
                 </form>
             </div>
-            <div class="contact_information" id="contact">
+            <div class="contact_information">
                 <div class="contact_information_title">Contact Information</div>
                 <div class="contact_information_text">
                     Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.

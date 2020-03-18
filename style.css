@@ -115,11 +115,67 @@ main {
     align-items: center;
 }
 
-.infinity-slider
+.carousel 
 {
+    position: relative;
     height: 594px;
     width: 800px;
     overflow: hidden;
+}
+
+.carousel_item {
+    display: none;
+    position: relative;
+    animation: 0.5s ease-in-out;
+    margin: 0 auto;
+}
+
+.active,
+.next {
+  display: block;
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+
+.to-left {
+    animation-name: left;
+}
+  
+  .from-right {
+    animation-name: right;
+}
+  
+  .to-right {
+    animation-name: right;
+    animation-direction: reverse;
+}
+  
+  .from-left {
+    animation-name: left;
+    animation-direction: reverse;
+}
+  
+  @keyframes left {
+    from {
+      left: 0;
+    }
+    to {
+      left: -100%;
+    }
+}
+  
+  @keyframes right {
+    from {
+      left: 100%;
+    }
+    to {
+      left: 0;
+    }
 }
 
 .phones1 {
@@ -136,20 +192,13 @@ main {
 .phones2 
 {
     position: absolute;
-    top: 96px;
+    top: 0px;
     height: 594px;
     width: 800px;
     background-image: url(./assets/img/slider2.png);
     background-position: center;
 
 }
-
-
-
-.hidden {
-    opacity: 0;
-}
-
 
 .verphone {
     margin-bottom: 5px;
