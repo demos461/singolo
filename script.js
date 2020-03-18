@@ -160,9 +160,10 @@ closeBtn.addEventListener('click', () => {
 
 //SCROLL 
 
-var services = document.getElementById('services').offsetTop-100;
-var portfolio = document.getElementById('portfolio').offsetTop-100;
-var about = document.getElementById('about').offsetTop-100;
+var services = document.getElementById('services').offsetTop-95;
+var portfolio = document.getElementById('portfolio').offsetTop-95;
+var about = document.getElementById('about').offsetTop-95;
+var contact = document.getElementById('contact').offsetTop-95;
 var navLink = document.querySelectorAll('.nav_link');
 
 window.addEventListener('scroll', function() {
@@ -172,19 +173,19 @@ window.addEventListener('scroll', function() {
         menu.querySelectorAll('a').forEach(el => el.classList.remove('nav_active'));
         navLink[0].classList.add('nav_active');
     }
-    if(page_offset>100 && page_offset<services) {
+    if(page_offset>=services && page_offset<portfolio) {
         menu.querySelectorAll('a').forEach(el => el.classList.remove('nav_active'));
         navLink[1].classList.add('nav_active');
     }
-    if(page_offset>=services && page_offset<portfolio) {
+    if(page_offset>=portfolio && page_offset<about) {
         menu.querySelectorAll('a').forEach(el => el.classList.remove('nav_active'));
         navLink[2].classList.add('nav_active');
     }
-    if(page_offset>=portfolio && page_offset<about) {
+    if(page_offset>=about && page_offset<contact) {
         menu.querySelectorAll('a').forEach(el => el.classList.remove('nav_active'));
         navLink[3].classList.add('nav_active');
     }
-    if(page_offset>=about) {
+    if(page_offset>=contact) {
         menu.querySelectorAll('a').forEach(el => el.classList.remove('nav_active'));
         navLink[4].classList.add('nav_active');
     }
