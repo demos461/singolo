@@ -8,8 +8,11 @@ var portfolioButtons = document.querySelectorAll('.portfolio_btn');
 // HEADER
 
 menu.addEventListener('click', (event) => {
-    menu.querySelectorAll('a').forEach(el => el.classList.remove('nav_active'));
-    event.target.classList.add('nav_active');
+    if (event.target!=menu) 
+    {
+        menu.querySelectorAll('a').forEach(el => el.classList.remove('nav_active'));
+        event.target.classList.add('nav_active');
+    }
 });
 
 //SLIDER 
@@ -44,14 +47,14 @@ function changeCurrentItem(n) {
 
 function hideItem(direction) {
 	isEnabled = false;
-	items[currentItem].classList.add(direction);
+    items[currentItem].classList.add(direction);
 	items[currentItem].addEventListener('animationend', function() {
 		this.classList.remove('active', direction);
 	});
 }
 
 function showItem(direction) {
-	items[currentItem].classList.add('next', direction);
+    items[currentItem].classList.add('next', direction);
 	items[currentItem].addEventListener('animationend', function() {
 		this.classList.remove('next', direction);
 		this.classList.add('active');
@@ -71,15 +74,16 @@ function previousItem(n) {
 	showItem('from-left');
 }
 
+
 document.querySelector('.arrow_left').addEventListener('click', function() {
 	if (isEnabled) {
-		previousItem(currentItem);
+        previousItem(currentItem);
 	}
 });
 
 document.querySelector('.arrow_right').addEventListener('click', function() {
 	if (isEnabled) {
-		nextItem(currentItem);
+        nextItem(currentItem);
 	}
 });
 

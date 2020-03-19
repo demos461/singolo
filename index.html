@@ -24,7 +24,7 @@
       </div>
 
       <nav class="nav" id="nav_id">
-        <a class="nav_link" href="#">Home</a>
+        <a class="nav_link nav_active" href="#">Home</a>
         <a class="nav_link" href="#services">Services</a>
         <a class="nav_link" href="#portfolio">Portfolio</a>
         <a class="nav_link" href="#about">About</a>
@@ -40,27 +40,38 @@
   <!-- Slider  -->
   <div class="slider">
     <div class="wrapper">
-      <div class="slider__inner">
+        <div class="slider__inner">
 
-        <a href="#" class="arrow_left" id></a>
-
-        <div class="carousel">
-            <div class="carousel_item active">
-                <div class="phones1">
-                    <img src="./assets/img/verphone.png" alt="phone" class="verphone"/>
-                    <img src="./assets/img/horphone.png" alt="phone" class="horphone"/>
-                    <div class="screen1"></div>
-                    <div class="screen2"></div>
+            <a href="#" class="arrow_left">
+                <svg class="arrow_left">
+                    <use xlink:href="#left_arrow"></use>
+                </svg> 
+            </a>
+    
+            <div class="carousel">
+                <div class="carousel_item active">
+                    <div class="phones1">
+                        <img src="./assets/img/phone-slider.png" alt="phone" class="verphone"/>
+                        <img src="./assets/img/phone-vertical-shadow.png" alt="phone-shadow" class="verphone_shadow">
+                        <img src="./assets/img/phone-slider.png" alt="phone" class="horphone"/>
+                        <img src="./assets/img/phone-horizontal-shadow.png" alt="phone-shadow" class="horphone_shadow">
+                        <div class="screen1"></div>
+                        <div class="screen2"></div>
+                    </div>
+                </div>
+                <div class="carousel_item">
+                    <div class="phones2"></div> 
                 </div>
             </div>
-            <div class="carousel_item">
-                <div class="phones2"></div> 
-            </div>
+    
+            <a href="#" class="arrow_right">
+                <svg class="arrow_right">
+                    <use xlink:href="#right_arrow"></use>
+                </svg> 
+                </a>
+    
         </div>
-
-        <a href="#" class="arrow_right"></a>
-
-      </div>
+    </div>    
     </div>
   </div>
   <!-- /slider -->
@@ -433,6 +444,14 @@
 
 <!-- Sprite -->
 <svg style="display: none;">
+    <symbol id="right_arrow" width="16" height="27" viewBox="0 0 16 27">
+        <path d="M0.697849 22.9923C-0.233349 23.9092 -0.232514 25.3553 0.699743 26.2713C1.68867 27.2429 3.33657 27.2429 4.32549 26.2713L15.0449 15.7392C16.3184 14.4879 16.3184 12.5121 15.0449 11.2608L4.32549 0.728735C3.33657 -0.242913 1.68867 -0.242911 0.699746 0.728737C-0.232511 1.64471 -0.233347 3.09077 0.69785 4.00769L8.06645 11.2634C9.33653 12.514 9.33653 14.486 8.06645 15.7366L0.697849 22.9923Z"/>
+    </symbol>
+
+    <symbol id="left_arrow" width="16" height="27" viewBox="0 0 16 27">
+        <path d="M15.3022 4.0077C16.2333 3.09077 16.2325 1.64471 15.3003 0.728736C14.3113 -0.242912 12.6634 -0.242912 11.6745 0.728737L0.955147 11.2608C-0.318384 12.5121 -0.318381 14.4879 0.955149 15.7392L11.6745 26.2713C12.6634 27.2429 14.3113 27.2429 15.3003 26.2713C16.2325 25.3553 16.2333 23.9092 15.3022 22.9923L7.93355 15.7366C6.66347 14.486 6.66347 12.514 7.93355 11.2634L15.3022 4.0077Z"/>
+    </symbol>
+
     <symbol id="facebook" viewBox="0 0 24 24">
         <path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/>
     </symbol>

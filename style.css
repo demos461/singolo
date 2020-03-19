@@ -112,9 +112,10 @@ main {
 
 .slider__inner {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
+
 
 .carousel 
 {
@@ -183,9 +184,6 @@ main {
     background-color: #f06c64;
     height: 594px;
     width: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     position: relative;
 
 }
@@ -202,60 +200,80 @@ main {
 }
 
 .verphone {
-    margin-bottom: 5px;
-    margin-left: 2px;
+    position: absolute;
+    top: 53px;
+    left: 2px;
+    z-index: 2;
+}
+
+.verphone_shadow {
+    position: absolute;
+    top: 53px;
+    left: 2px;
+    z-index: 1;
 }
 
 .horphone {
-    margin-bottom: 6px;
-    margin-right: 1px;
+    position: absolute;
+    z-index: 2;
+    transform: rotate(90deg);
+    right: 148px;
+    top: 53px;
+}
 
+.horphone_shadow {
+    position: absolute;
+    right: 1px;
+    top: 174px;
+    z-index: 1;
 }
 
 .screen1 {
-    left: 15px;
-    top: 117px;
+    left: 16px;
+    top: 118px;
     position: absolute;
     background: url(./assets/img/screen1.png);
-    background-position: -13px -134px;
-    height: 334px;
+    background-position: -14px -135px;
+    height: 333px;
     width: 189px;
+    z-index: 3;
 }
 
 .screen2 {
-    right: 91px;
-    top: 188px;
+    right: 92px;
+    top: 187px;
     position: absolute;
     background: url(./assets/img/screen2.png);
     background-position: -125px -119px;
     height: 189px;
     width: 334px;
+    z-index: 3;
 }
 
 .screen_off {
     background: black;
 }
 
-a.arrow_left {
-    background: url('./assets/img/leftArrow.png');
-    display: block;
+.arrow_left {
     height: 27px;
     width: 16px;
+    fill: #E94348;
+    transition: fill .2s linear;
 }
 
-a.arrow_left:hover{
-    background: url('./assets/img/leftArrow-white.png');
-}
-
-a.arrow_right {
-    background: url('./assets/img/rightArrow.png');
-    display: block;
+.arrow_right {
     height: 27px;
     width: 16px;
+    fill: #E94348;
+    transition: fill .2s linear;
 }
 
-a.arrow_right:hover {
-    background: url('./assets/img/rigthArrow-white.png');
+.arrow_left:hover{
+    fill: #f2f2f2;
+}
+
+.arrow_right:hover {
+    fill: #f2f2f2;
 }
 
 /* Services */
