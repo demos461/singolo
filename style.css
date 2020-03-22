@@ -105,7 +105,7 @@ main {
     height: 600px;
     border-bottom: 6px solid #ea676b;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
 }
@@ -113,7 +113,8 @@ main {
 .slider__inner {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+
 }
 
 
@@ -121,7 +122,7 @@ main {
 {
     position: relative;
     height: 594px;
-    width: 800px;
+    width: 1020px;
     overflow: hidden;
 }
 
@@ -182,34 +183,30 @@ main {
 
 .phones1 {
     background-color: #f06c64;
-    height: 594px;
-    width: 800px;
+    height: 483px;
+    width: 796px;
     position: relative;
+    margin: 54px 112px 63px;
 
 }
 
 .phones2 
 {
-    position: absolute;
-    top: 0px;
-    height: 594px;
-    width: 800px;
     background-image: url(./assets/img/slider2.png);
-    background-position: center;
+    height: 594px;
+    width: 1020px;
 
 }
 
 .verphone {
     position: absolute;
-    top: 53px;
-    left: 2px;
+    top: 0;
+    left: 0;
     z-index: 2;
 }
 
 .verphone_shadow {
     position: absolute;
-    top: 53px;
-    left: 2px;
     z-index: 1;
 }
 
@@ -217,20 +214,20 @@ main {
     position: absolute;
     z-index: 2;
     transform: rotate(90deg);
-    right: 148px;
-    top: 53px;
+    right: 146px;
+    top: 0px;
 }
 
 .horphone_shadow {
     position: absolute;
-    right: 1px;
-    top: 174px;
+    right: 0;
+    top: 120px;
     z-index: 1;
 }
 
 .screen1 {
-    left: 16px;
-    top: 118px;
+    left: 14px;
+    top: 64px;
     position: absolute;
     background: url(./assets/img/screen1.png);
     background-position: -14px -135px;
@@ -240,11 +237,11 @@ main {
 }
 
 .screen2 {
-    right: 92px;
-    top: 187px;
+    right: 90px;
+    top: 134px;
     position: absolute;
     background: url(./assets/img/screen2.png);
-    background-position: -125px -119px;
+    background-position: -122px -119px;
     height: 189px;
     width: 334px;
     z-index: 3;
@@ -255,6 +252,10 @@ main {
 }
 
 .arrow_left {
+    position: absolute;
+    left: 20px;
+    top: 140px;
+    z-index: 6;
     height: 27px;
     width: 16px;
     fill: #E94348;
@@ -262,6 +263,10 @@ main {
 }
 
 .arrow_right {
+    position: absolute;
+    right: 20px;
+    top: 140px;
+    z-index: 6;
     height: 27px;
     width: 16px;
     fill: #E94348;
@@ -727,4 +732,60 @@ input[type=text], input[type=email] {
 #message p {
     margin: 0;
     margin-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+
+    .header {
+        position: static;
+
+    }
+
+    .main {
+        margin-top: 0;
+    }
+
+    .wrapper {
+        max-width: 768px;
+    }
+
+    .slider {
+        height: 451px;
+    }
+    .carousel {
+        width: 768px;
+        height: 451px;
+    }
+
+    .services {
+        height: 674px;
+    }
+
+    .portfolio {
+        height: 1100px;
+    }
+
+    .works {
+        height: 794px;
+    }
+
+    .works__item img {
+        width: 216.19px;
+        height: 183.76px;
+
+    }
+
+    .designers__item {
+        width: 218.94px;
+    }
+
+    .designers__photo img {
+        width: 218.94px;
+        height: 218.94px;
+    }
+
+    .quote {
+        height: 768px;
+    }
 }
