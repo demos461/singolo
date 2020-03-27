@@ -37,9 +37,11 @@ phone2.addEventListener('click', () => {
     }
 });
 
-let items = document.querySelectorAll('.carousel_item');
-let currentItem = 0;
-let isEnabled = true;
+var items = document.querySelectorAll('.carousel_item');
+var currentItem = 0;
+var isEnabled = true;
+var sliderBlock = document.querySelector('.slider');
+
 
 function changeCurrentItem(n) {
 	currentItem = (n + items.length) % items.length;
@@ -54,6 +56,12 @@ function hideItem(direction) {
 }
 
 function showItem(direction) {
+    if (currentItem) {
+        sliderBlock.classList.add('slider_blue');
+      } else {
+        sliderBlock.classList.remove('slider_blue');
+      }
+
     items[currentItem].classList.add('next', direction);
 	items[currentItem].addEventListener('animationend', function() {
 		this.classList.remove('next', direction);
@@ -107,14 +115,15 @@ works.addEventListener('click', (event) => {
    
 });
 
+
 function switchImg(){
-    var imgs = document.querySelectorAll(".works__item img");
+    var imgs = document.querySelectorAll(".works__item");
 	var rand, temp;
 	for(var i = imgs.length - 1; i > 0; i--){
 		rand = Math.floor(Math.random()*(i + 1));
-		temp = imgs[rand].src;
-		imgs[rand].src = imgs[i].src;
-		imgs[i].src = temp;
+		temp = imgs[rand].innerHTML;
+		imgs[rand].innerHTML = imgs[i].innerHTML;
+		imgs[i].innerHTML = temp;
 	}
 }
 
