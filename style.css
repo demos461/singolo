@@ -14,6 +14,7 @@ body {
     margin: 0;
     font-family: 'Lato', sans-serif;
     color: #666d89;
+
 }
 
 
@@ -190,6 +191,8 @@ h1 {
 .menu__item:hover {
 	color: #f06c64;
 }
+
+
 
 
 /* Slider */
@@ -911,6 +914,13 @@ input[type=text], input[type=email] {
 
     }
 
+    .screen2 {
+        right: 69px;
+        top: 101px;
+        height: 141.55px;
+        width: 250.73px;
+    }   
+
     .works__item {
 		width: calc( (100% - 15px) / 2);
 		height: auto;
@@ -923,12 +933,83 @@ input[type=text], input[type=email] {
 		max-width: 220px;
 	}
     
+ 
+}
+
+@media (max-width: 730px) {
+    .slider, .slider__inner {
+        height: 218.38px;
+    }
+
+    .carousel_item {
+        height: 218.38px;
+    }
+
+    .phones1 {
+
+        width: 292.72px;
+        height: 177.61px;
+        margin: 0px;
+        position: absolute;
+        top: 20px;
+        left: 45px;
+
+    
+    }
+    
+    .phones2 
+    {
+        background-size: cover;
+        width: 375.49px;
+        height: 220.59px;
+    
+    }
+    
+    .verphone {
+        top: 0;
+        left: 0;
+        width: 79.28px;
+        height: 168.1px
+    }
+    
+    .verphone_shadow {
+        width: 88.24px;
+        height: 177.57px;
+    }
+    
+    .horphone {
+        right: 55px;
+        top: 0px;
+        width: 79.28px;
+        height: 168.1px;
+    }
+    
+    .horphone_shadow {
+        right: 0;
+        top: 45px;
+        width: 177.57px;
+        height: 88.24px;
+    
+    }
+    
+    .screen1 {
+        left: 4.7px;
+        top: 23.6px;
+        height: 122.43px;
+        width: 69.12px;
+
+    }
+
     .screen2 {
-        right: 69px;
-        top: 101px;
-        height: 141.55px;
-        width: 250.73px;
-    }    
+        right: 34.6px;
+        top: 49px;
+        height: 69.12px;
+        width: 122.43px;
+    }   
+
+    .arrow_left, .arrow_right {
+        top: 40%;
+    }
 }
 
 @media (max-width: 570px) {
