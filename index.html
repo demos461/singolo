@@ -31,6 +31,20 @@
         <a class="nav_link" href="#contact">Contact</a>
       </nav>
 
+      <div id="burger" class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+            <span></span>
+        </label>
+          <nav class="menu__box">
+            <a class="menu__item nav_active" href="#">Home</a>
+            <a class="menu__item" href="#services">Services</a>
+            <a class="menu__item" href="#portfolio">Portfolio</a>
+            <a class="menu__item" href="#about">About</a>
+            <a class="menu__item" href="#contact">Contact</a>
+          </nav>
+      </div>
+
     </div>
   </div>
 </header>
@@ -39,36 +53,34 @@
 <main class="main">
   <!-- Slider  -->
   <div class="slider">
-    <div class="slider__inner">
-        <div class="carousel">
-            <a href="#" class="arrow_left">
-                <svg class="arrow_left">
-                    <use xlink:href="#left_arrow"></use>
-                </svg> 
-            </a>
+    <div class="carousel">
+        <a href="#" class="arrow_left">
+            <svg class="arrow_left">
+                <use xlink:href="#left_arrow"></use>
+            </svg> 
+        </a>
 
-            <a href="#" class="arrow_right">
-                <svg class="arrow_right">
-                    <use xlink:href="#right_arrow"></use>
-                </svg> 
-            </a>
-            
-            <div class="carousel_item active">
-                <div class="phones1">
-                    <img src="./assets/img/phone-slider.png" alt="phone" class="verphone"/>
-                    <img src="./assets/img/phone-vertical-shadow.png" alt="phone-shadow" class="verphone_shadow">
-                    <img src="./assets/img/phone-slider.png" alt="phone" class="horphone"/>
-                    <img src="./assets/img/phone-horizontal-shadow.png" alt="phone-shadow" class="horphone_shadow">
-                    <div class="screen1"></div>
-                    <div class="screen2"></div>
-                </div>
+        <a href="#" class="arrow_right">
+            <svg class="arrow_right">
+                <use xlink:href="#right_arrow"></use>
+            </svg> 
+        </a>
+        
+        <div class="carousel_item active">
+            <div class="phones1">
+                <img src="./assets/img/phone-slider.png" alt="phone" class="verphone"/>
+                <img src="./assets/img/phone-vertical-shadow.png" alt="phone-shadow" class="verphone_shadow">
+                <img src="./assets/img/phone-slider.png" alt="phone" class="horphone"/>
+                <img src="./assets/img/phone-horizontal-shadow.png" alt="phone-shadow" class="horphone_shadow">
+                <div class="screen1"></div>
+                <div class="screen2"></div>
             </div>
-            
-            <div class="carousel_item">
-                <div class="phones2"></div> 
-            </div>
-        </div>  
-    </div>
+        </div>
+        
+        <div class="carousel_item">
+            <div class="phones2"></div> 
+        </div>
+    </div>  
     </div>
   </div>
   <!-- /slider -->
