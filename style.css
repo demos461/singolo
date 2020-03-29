@@ -169,6 +169,7 @@ h1 {
 }
 
 .menu__box {
+    
 	display: flex;
     flex-direction: column;
 	position: fixed;
@@ -186,8 +187,8 @@ h1 {
 }
 
 .menu__item {
-	display: block;
-	color: white;
+    display: block;
+    color: #f2f2f2;
 	font-weight: 400;
     font-size: 24px;
     line-height: 29px;
@@ -196,6 +197,10 @@ h1 {
     margin-bottom: 27px;
     text-transform: uppercase;
 	transition-duration: .25s;
+}
+
+.menu__item_active {
+    color: #f06c64;
 }
 .menu__item:hover {
 	color: #f06c64;
@@ -921,6 +926,8 @@ input[type=text], input[type=email] {
         top: 48px;
         height: 250.73px;
         width: 141.55px;
+        background-size: 310%;
+        background-position: -10px -100px;
 
     }
 
@@ -929,6 +936,8 @@ input[type=text], input[type=email] {
         top: 101px;
         height: 141.55px;
         width: 250.73px;
+        background-size: 180%;
+        background-position: -100px -100px;
     }   
 
     .works__item {
@@ -1007,6 +1016,7 @@ input[type=text], input[type=email] {
         top: 23.6px;
         height: 122.43px;
         width: 69.12px;
+        background-position: 0px -50px;
 
     }
 
@@ -1015,6 +1025,8 @@ input[type=text], input[type=email] {
         top: 49px;
         height: 69.12px;
         width: 122.43px;
+        background-size: 200%;
+        background-position: -60px -50px;
     }   
 
     .arrow_left, .arrow_right {
